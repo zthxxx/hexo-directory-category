@@ -1,0 +1,34 @@
+{
+  "name": "hexo-directory-category",
+  "version": "1.0.0",
+  "description": "Automatically add category to Hexo article according to the article file directory.",
+  "main": "index",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zthxxx/hexo-directory-category.git"
+  },
+  "keywords": [
+    "hexo",
+    "auto",
+    "directory",
+    "category"
+  ],
+  "author": {
+    "name": "zthxxx",
+    "email": "zthxxx_9451@qq.com",
+    "url": "https://blog.zthxxx.me"
+  },
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "readmeFilename": "README.md",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zthxxx/hexo-directory-category/issues"
+  },
+  "homepage": "https://github.com/zthxxx/hexo-directory-category#readme",
+  "dependencies": {
+    "hexo": ">=3.0.0"
+  }
+}
