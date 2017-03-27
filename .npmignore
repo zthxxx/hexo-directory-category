@@ -1,0 +1,10 @@
+.DS_Store
+test/
+tmp/
+coverage/
+.idea/
+*.log
+appveyor.yml
+.travis.yml
+gulpfile.js
+.eslintrc.js

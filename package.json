@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "Automatically add category to Hexo article according to the article file directory.",
   "main": "index",
-  "scripts": {},
+  "scripts": {
+    "test": "gulp test"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/zthxxx/hexo-directory-category.git"
@@ -30,5 +32,15 @@
   "homepage": "https://github.com/zthxxx/hexo-directory-category#readme",
   "dependencies": {
     "hexo": ">=3.0.0"
+  },
+  "devDependencies": {
+    "bluebird": "^3.5.0",
+    "chai": "^3.5.0",
+    "chai-as-promised": "^6.0.0",
+    "gulp": "^3.9.1",
+    "gulp-eslint": "^3.0.1",
+    "gulp-istanbul": "^1.1.1",
+    "gulp-mocha": "^4.1.0",
+    "hexo": "^3.2.2"
   }
 }

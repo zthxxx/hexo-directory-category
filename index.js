@@ -9,6 +9,6 @@ hexo.config.auto_dir_categorize = assign({
   force: false
 }, hexo.config.auto_dir_categorize);
 
-var post_processor = require('./lib/processor')(hexo);
+var post_processor = require('./lib/processor_post')(hexo);
 
 hexo.extend.processor.register(post_processor.pattern, post_processor.process);
