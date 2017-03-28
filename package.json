@@ -1,6 +1,6 @@
 {
   "name": "hexo-directory-category",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Automatically add category to Hexo article according to the article file directory.",
   "main": "index",
   "scripts": {
@@ -23,7 +23,7 @@
     "url": "https://blog.zthxxx.me"
   },
   "engines": {
-    "node": ">= 0.10.0"
+    "node": ">= 6.10.0"
   },
   "readmeFilename": "README.md",
   "license": "MIT",
@@ -32,7 +32,12 @@
   },
   "homepage": "https://github.com/zthxxx/hexo-directory-category#readme",
   "dependencies": {
-    "hexo": ">=3.0.0"
+    "bluebird": "^3.5.0",
+    "hexo": ">=3.0.2",
+    "lodash": "^4.17.4",
+    "minimatch": "^3.0.0",
+    "moment-timezone": "^0.5.4",
+    "object-assign": "^4.1.0"
   },
   "devDependencies": {
     "bluebird": "^3.5.0",
