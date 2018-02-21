@@ -4,7 +4,7 @@ const istanbul = require('gulp-istanbul');
 const mocha = require('gulp-mocha');
 
 gulp.task('coverage', () => {
-  return gulp.src(['lib/**/*.js','!lib/common.js'])
+  return gulp.src(['lib/classify.js'])
     // Covering files 
     .pipe(istanbul({
       includeUntested: true
