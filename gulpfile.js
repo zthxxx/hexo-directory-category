@@ -1,13 +1,15 @@
 const gulp = require('gulp');
 const eslint = require('gulp-eslint'); // https://github.com/adametry/gulp-eslint
 const istanbul = require('gulp-istanbul');
+const isparta = require('isparta');
 const mocha = require('gulp-mocha');
 
 gulp.task('coverage', () => {
   return gulp.src(['lib/classify.js'])
     // Covering files 
     .pipe(istanbul({
-      includeUntested: true
+      // supports es6
+      instrumenter: isparta.Instrumenter
     }))
     // Force `require` to return covered files 
     .pipe(istanbul.hookRequire());

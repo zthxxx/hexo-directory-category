@@ -1,6 +1,6 @@
 {
   "name": "hexo-directory-category",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Automatically add category to Hexo article according to the article file directory.",
   "main": "index",
   "scripts": {
@@ -46,6 +46,7 @@
     "gulp-eslint": "^4.0.2",
     "gulp-istanbul": "^1.1.3",
     "gulp-mocha": "^5.0.0",
-    "hexo": "^3.6.0"
+    "hexo": "^3.6.0",
+    "isparta": "^4.0.0"
   }
 }
