@@ -1,6 +1,6 @@
 {
   "name": "hexo-directory-category",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Automatically add category to Hexo article according to the article file directory.",
   "main": "index",
   "scripts": {
