@@ -12,7 +12,7 @@ describe('Hexo-Directory-Category', function() {
   const Hexo = require('hexo');
   let baseDir = pathFn.join(__dirname, 'post_test');
   let hexo = new Hexo(baseDir);
-  let post = require('../lib/processor_post')(hexo);
+  let post = require('../lib/processor/post')(hexo);
   let process = Promise.method(post.process.bind(hexo));
   let source = hexo.source;
   let File = source.File;

@@ -1,0 +1,49 @@
+# https://help.github.com/en/actions/reference/workflow-syntax-for-github-actions
+
+name: release version to npm
+
+on:
+  push:
+    tags:
+      - v*
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        # https://github.com/actions/checkout
+        uses: actions/checkout@v2
+        with:
+          # Number of commits to fetch. 0 indicates all history.
+          # all history for changelog
+          fetch-depth: 0
+
+      - name: Setup node
+        # https://github.com/actions/setup-node
+        uses: actions/setup-node@v1
+        with:
+          node-version: 13.x
+
+      - name: Install
+        run: |
+          npm ci
+
+      - name: Test
+        id: test
+        run: |
+          npm run test
+
+      - name: Coveralls
+        # https://github.com/coverallsapp/github-action
+        uses: coverallsapp/github-action@master
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Publish to npm
+        id: publish-to-npm
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          npm publish

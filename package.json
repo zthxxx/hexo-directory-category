@@ -1,6 +1,6 @@
 {
   "name": "hexo-directory-category",
-  "version": "1.0.7",
+  "version": "1.1.0",
   "description": "Automatically add category to Hexo article according to the article file directory.",
   "main": "index",
   "scripts": {
@@ -23,7 +23,7 @@
     "url": "https://blog.zthxxx.me"
   },
   "engines": {
-    "node": ">= 6.10.0"
+    "node": ">= 12.0.0"
   },
   "readmeFilename": "README.md",
   "license": "MIT",
@@ -31,22 +31,32 @@
     "url": "https://github.com/zthxxx/hexo-directory-category/issues"
   },
   "homepage": "https://github.com/zthxxx/hexo-directory-category#readme",
+  "files": [
+    "README.md",
+    "src",
+    "bin",
+    "dist",
+    "index.js",
+    "midk.yml"
+  ],
   "dependencies": {
-    "bluebird": "^3.5.1",
-    "lodash": "^4.17.5",
-    "minimatch": "^3.0.4",
-    "moment-timezone": "^0.5.14",
+    "bluebird": "^3.7.2",
+    "hexo-front-matter": "^1.0.0",
+    "hexo-fs": "^3.1.0",
+    "hexo-util": "^2.2.0",
+    "micromatch": "^4.0.2",
+    "moment-timezone": "^0.5.31",
     "object-assign": "^4.1.1"
   },
   "devDependencies": {
     "chai": "^4.1.2",
     "chai-as-promised": "^7.1.1",
     "coveralls": "^3.0.0",
-    "gulp": "^3.9.1",
-    "gulp-eslint": "^4.0.2",
+    "gulp": "^4.0.2",
+    "gulp-eslint": "^6.0.0",
     "gulp-istanbul": "^1.1.3",
-    "gulp-mocha": "^5.0.0",
-    "hexo": "^3.6.0",
+    "gulp-mocha": "^7.0.2",
+    "hexo": "^4.2.1",
     "isparta": "^4.0.0"
   }
 }

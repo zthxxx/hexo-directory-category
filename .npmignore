@@ -8,3 +8,5 @@ appveyor.yml
 .travis.yml
 gulpfile.js
 .eslintrc.js
+.github/
+.vscode/

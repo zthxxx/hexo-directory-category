@@ -15,7 +15,7 @@ gulp.task('coverage', () => {
     .pipe(istanbul.hookRequire());
 });
 
-gulp.task('mocha', ['coverage'], () => {
+gulp.task('mocha', gulp.series(['coverage'], () => {
   return gulp.src('test/index.js')
     .pipe(mocha({
       reporter: 'spec',
@@ -23,7 +23,7 @@ gulp.task('mocha', ['coverage'], () => {
     }))
     // Creating the reports after tests ran 
     .pipe(istanbul.writeReports());
-});
+}));
 
 gulp.task('eslint', () => {
   // ESLint ignores files with "node_modules" paths.
@@ -42,4 +42,7 @@ gulp.task('eslint', () => {
     .pipe(eslint.failAfterError());
 });
 
-gulp.task('test', ['mocha', 'eslint']);
+gulp.task('test', gulp.series([
+  'mocha',
+  'eslint',
+]));
