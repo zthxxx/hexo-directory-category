@@ -35,15 +35,9 @@ jobs:
         run: |
           npm run test
 
-      - name: Coveralls
-        # https://github.com/coverallsapp/github-action
-        uses: coverallsapp/github-action@master
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-
       - name: Publish to npm
         id: publish-to-npm
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
           npm publish
