@@ -27,8 +27,8 @@ module.exports = {
   },
   'globals': {
       'describe': true,
-      'before': true,
-      'after': true,
+      'beforeAll': true,
+      'afterAll': true,
       'it': true
   }
 };
